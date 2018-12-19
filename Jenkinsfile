@@ -56,7 +56,7 @@ pipeline
 
             steps
             {
-                sh '${mavenExecutable} clean deploy gitlab-release:release -DgitlabAccessToken=$GITLAB_ACCESS_TOKEN -Dmaven.test.skip=true -DgitlabBranchName=$deploymentBranch'
+                sh '${mavenExecutable} clean deploy -Dmaven.test.skip=true'
             }
         }
 
